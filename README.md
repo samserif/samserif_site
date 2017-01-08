@@ -23,4 +23,12 @@
 - Boomerang
 - OneTab
 - WhatFont
+- bitly
+- Pinterest
 
+###Sketch Plugins
+- Artboards to PDF
+- Notebook
+- Measure
+- Craft 
+- Autolayout

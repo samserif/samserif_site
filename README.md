@@ -1,4 +1,6 @@
 ##Personal Setup Notes
+https://github.com/murtyjones/setup-scripts/blob/master/murtyjones.sh
+
 
 ### iTerm 2
 - Install [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh).

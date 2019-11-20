@@ -1,0 +1,33 @@
+<% function fullText(content) {
+  if(content.indexOf("<!-- more -->") == -1) return content;
+  else return content.split("<!-- more -->")[1]; 
+} %>
+
+<html>
+  <head>
+    <title><%= title %></title>
+    <%- partial("../../partials/_meta") %>
+  </head>
+  <body>
+    <%- partial("../../partials/_header") %>
+    <article class="post-page">
+      <div class="post-page_header">
+
+        <% for(var cat of category) { %>
+          <span class="category-<%- cat %>">
+            <a class="category-list_item_link" href="../../blog/category/<%- cat %>.html"><%- cat %></a>
+          </span>
+        <% } %>
+
+        <h2 class="post-page_header_title"><%- title %></h2>
+        <p class="post-page_header_date"><%- date %></p>
+                
+
+      </div>
+      <%- fullText(yield) %>
+      
+    </article>
+    <%- partial("../../partials/_footer") %>
+  </body>
+  <%- partial("../../partials/_scripts") %>
+</html>

@@ -1,0 +1,42 @@
+footer {
+  align-items: center;
+  background: $purple;
+  color: $white;
+  display: flex;
+  flex-flow: column nowrap;
+  height: 150px;
+  justify-content: center;
+  padding: 20px 10px 10px;
+  width: 100%;
+
+  .icon-wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    width: 150px;
+
+    > a,
+    > a:hover,
+    > a:focus {
+      text-decoration: none;
+      outline: none;
+    }
+  }
+
+  .copyright {
+    color: $white;
+    font-size: 9px;
+    margin-top: auto;
+  }
+
+  @include bp(phablet){
+    .footer_copy {
+      font-size: 21px;
+    }
+
+    .copyright {
+      align-self: flex-start;
+    }
+  }
+}

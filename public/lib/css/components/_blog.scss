@@ -1,0 +1,176 @@
+// 2 column blog layout // ------------
+.posts {
+  color: $grey;
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 70px auto;
+  padding: 0 20px;
+  width: 100%;
+
+  .post_sidebar {
+    h3 {
+      display: none;
+    }
+  }
+
+  .post_list {
+    flex: 2 0 70%;
+
+    .post_list_item {
+      margin-bottom: 50px;
+      position: relative;
+
+      .post_list_item_title a {
+        color: $grey;
+        font-size: 32px;
+        font-weight: normal;
+        line-height: 1.2;
+        text-decoration: none;
+      }
+
+      .post_list_item_date {
+        font-size: 14px;
+      }
+
+      .post_list_hover {
+        background: $purple;
+        height: 0;
+        left: -20px;
+        position: absolute;
+        opacity: 0;
+        transform: translateY(50%);
+        transition: all 0.5s ease-in;
+        width: 1px;
+      }
+
+      &:hover,
+      &:focus {
+        .post_list_hover {
+          opacity: 1;
+          height: 100%;
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+
+  .categorylist {
+    align-items: center;
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    margin-bottom: 50px;
+  }
+
+  .category-list_item_link {
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: $transition-fast;
+    line-height: 3;
+    padding-right: 15px;
+  }
+  
+  @include bp(phablet){
+  flex-flow: row nowrap;
+
+
+    .post_sidebar {
+      flex: 1 0 30%;
+
+      h3 {
+        display: block;
+        margin-bottom: 20px;
+      }
+
+      .categorylist {
+        list-style: none;
+        flex-flow: column nowrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+    }
+
+    .post_list {
+      flex: 2 0 70%;
+    }
+  }
+}
+
+//Color list for categories
+$category-colors:
+  (Front-End, $front-end),
+  (Design, $design),
+  (UX, $ux),
+  (Tools, $tools);
+@each $category-name, $color in $category-colors {
+  .category-#{$category-name} .category-list_item_link{
+    color: $color;
+    
+    &:focus, 
+    &:hover {
+      color: darken($color, 10%);
+    }    
+  }
+}
+
+//Blog pages
+article.post-page {
+  margin: 100px auto;
+  padding: 0 20px;
+  width: 100%;
+  @include bp(phablet){
+    padding: 0 10%;
+  }
+
+  .post-page_header {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+
+    .post-page_header_title {
+      color: $grey;
+      margin: 10px 0;
+    }
+
+    .post-page_header_date {
+      border-bottom: 1px solid $purple;
+      color: $grey;
+      font-size: 14px;
+      line-height: 1.5;
+      padding-bottom: 50px;
+    }
+  }
+
+  //Codepen embed
+  .cp_embed_wrapper {
+    max-width: 800px;
+    margin: 50px 0;
+  }
+
+  //section title
+  h3 {
+    color: $grey;
+    font-weight: normal;
+    line-height: 1.2;
+    margin-bottom: 30px;
+  }
+
+  code {
+    background: rgba($ltgrey, 0.5);
+    color: $summerrain;
+    border-radius: 4px;
+    padding: 0 5px;
+  }
+
+  a {
+    @include underline ($purple)
+  }
+
+  p {
+    max-width: 800px;
+    margin-bottom: 30px;
+  }
+}
+
+

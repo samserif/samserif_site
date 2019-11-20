@@ -1,0 +1,43 @@
+<% function excerpt(content) {
+  if(content.indexOf("<!-- more -->") == -1) return content;
+  else return content.split("<!-- more -->")[0]; 
+} %>
+
+<main class="hero--blog">
+  <h1 class="hero_headline">
+    <svg class="icon icon--skills">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/lib/img/icons.svg#write-icon"></use>
+    </svg>
+    samserif_blog
+    </h1>
+  <p class="hero_subtext">My thoughts on Product Design, UI/UX & Front-end Code</p>
+</main>
+
+<section class="posts">
+  <div class="post_sidebar">
+    <%- partial("_categories") %>
+  </div>
+  <div class="post_list">
+          
+    <% for(var key in public.blog.posts._data){ %>
+      <% var post = public.blog.posts._data[key] %>
+      
+      <div class="post_list_item">
+        <div class="post_list_hover"></div>
+          <!-- Category names -->
+          <% for(var cat of post.category) { %>
+            <span class="category-<%- cat %>">
+              <a class="category-list_item_link" href="/blog/category/<%- cat %>.html"><%- cat %></a>
+            </span>
+          <% } %>
+              
+          <h2 class="post_list_item_title"><a href="/blog/posts/<%= key %>.html"><%= post.title %></a></h2>
+
+          <p class="post_list_item_date"><%- post.date %></p>
+
+          <%- excerpt(partial("posts/" + key)) %>
+            
+      </div>
+    <% }; %>
+  </div>
+ </section>

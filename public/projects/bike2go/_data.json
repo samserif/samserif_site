@@ -1,0 +1,11 @@
+{
+  "index": {
+    "title": "samserif | bike2go App",
+    "hero": {
+      "prefix": "bike2go",
+      "headline": "bike2go App",
+      "subtext": "Mobile iOS app for Philly Bike Share"
+    },
+    "projNext": "projects/cprefresh"
+  }
+}

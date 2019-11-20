@@ -1,0 +1,11 @@
+{
+  "index": {
+    "title": "samserif | Streams for Tablet iOS and Android",
+    "hero": {
+      "prefix": "streams",
+      "headline": "Streams",
+      "subtext": "App for Tablet iOS and Android"
+    },
+    "projNext": "projects/hookandloop"
+  }
+}

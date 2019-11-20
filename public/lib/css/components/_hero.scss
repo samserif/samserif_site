@@ -1,0 +1,81 @@
+.hero {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  min-height: 400px;
+  width: 100%;
+
+  @include bp(phablet){
+    min-height: 450px;
+  }
+  @include bp(tablet){
+    min-height: 650px;
+  }
+}
+
+.hero--blog {
+  margin-top: 120px;
+  min-height: 0;
+}
+
+.hero_headline,
+.hero_subtext {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 70%;
+
+  @include bp(tablet){
+    max-width: 60%;
+  }
+}
+
+.hero_headline {
+  color: $purple;
+  margin-bottom: 15px;
+}
+
+.hero_subtext {
+  border-bottom: 1px solid #D0D0D0;
+  color: $grey;
+  font-size: 21px;
+  line-height: 1.5;
+  padding-bottom: 50px;
+
+  @include bp(tablet){
+    font-size: 24px;
+  }
+}
+
+
+// Background images for Hero
+.hero-minglechat {
+  background-image: url(/lib/img/hero/minglechat.png);
+}
+.hero-hookandloop {
+  background-image: url(/lib/img/hero/hookandloop.png);
+}
+.hero-responsivenav {
+  background-image: url(/lib/img/hero/respnav.png);
+}
+.hero-streams {
+  background-image: url(/lib/img/hero/streams.png);
+}
+.hero-bike2go {
+  background-image: url(/lib/img/hero/bike2go.png);
+}
+.hero-campaigns {
+  background-image: url(/lib/img/hero/campaigns.png);
+}
+.hero-cprefresh {
+  background-image: url(/lib/img/hero/cprefresh.png);
+}
+.hero-kegg {
+  background-image: url(/lib/img/hero/kegg.png);
+}
+.hero-vendorsenders {
+  background-image: url(/lib/img/hero/vendor.png);
+}
+

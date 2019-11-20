@@ -1,0 +1,84 @@
+// Load Fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Bitter);
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Bitter', serif;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.4;
+
+  @include bp(tablet){
+    font-size: 65px;
+  }
+}
+
+h2 {
+  font-size: 24px;
+
+  @include bp(tablet){
+    font-size: 28px;
+  }
+}
+
+h3 {
+  font-size: 18px;
+  line-height: 1.2;
+
+  @include bp(tablet){
+    font-size: 21px;
+  }
+}
+
+h4 {
+  font-size: 16px;
+
+  @include bp(tablet){
+    font-size: 18px;
+  }
+}
+
+p,
+li {
+  color: $grey;
+  font-size: 18px;
+  line-height: 2;
+}
+
+blockquote {
+  border-left: 3px solid $purple;
+  color: lighten($purple, 5%);
+  font-size: 20px;
+  line-height: 1.9;
+  margin-left: 5%;
+  margin-bottom: 30px;
+  padding-left: 25px;
+}
+
+/* mobile only styles */
+.mobile-only {
+  display: none;
+
+  @include bp(phablet){
+    display: block;
+  }
+}

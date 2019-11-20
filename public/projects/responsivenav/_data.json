@@ -1,0 +1,11 @@
+{
+  "index": {
+    "title": "samserif | Infor Responsive Navigation",
+    "hero": {
+      "prefix": "responsivenav",
+      "headline": "Infor Responsive Navigation",
+      "subtext": "Scheduling web application"
+    },
+    "projNext": "projects/campaigns"
+  }
+}

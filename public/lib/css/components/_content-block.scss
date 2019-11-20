@@ -1,0 +1,254 @@
+// Content blocks for all project pages // ------------
+.projects > section {
+  margin: 70px auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+
+// Text block // ---------------------------------------
+.text-block {
+  max-width: 800px;
+
+  .text-block_title {
+    color: $grey;
+    font-size: 32px;
+    font-weight: normal;
+    line-height: 1.2;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .text-block_copy {
+    margin-bottom: 30px;
+  }
+
+  /* Role types include: Discovery, Branding, UX, Web Design, UI Design, HTML/CSS */
+  .text-block_role {
+    color: $purple;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  a {
+    @include underline ($purple)
+  }
+}
+
+
+// Feature  block // ---------------------------------------
+.feature-block {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  max-width: 1200px;
+
+  .feature-block_copy {
+    margin-bottom: 30px;
+
+    .feature-block_title {
+      color: $grey;
+      font-size: 28px;
+      font-weight: normal;
+      line-height: 1.2;
+      margin-bottom: 30px;
+    }
+  }
+  
+  .feature-block_img {
+    img {
+      box-shadow: 0 2px 5px $ltgrey;
+      padding: 10px;
+      width: 100%;
+    }
+  }
+
+  @include bp(phablet) {
+    flex-flow: row nowrap;
+    max-width: 70%;
+
+    .feature-block_copy {
+      padding-right: 30px;
+      width: 50%;
+    }
+
+    .feature-block_img {
+      margin-left: 30px;
+      width: 50%;
+
+        img {
+          display: block;
+          margin: auto;
+        }
+    }
+
+    &.feature-block--reversed {
+      flex-flow: row-reverse nowrap;
+
+      .feature-block_copy {
+        padding-right: 0;
+        padding-left: 30px;
+      }
+
+      .feature-block_img {
+        margin-left: 0;
+        margin-right: 30px;
+      }
+    }
+  }
+}
+
+
+// Image block // ---------------------------------------
+.image-block {
+  img {
+    width: 100%;
+  }
+
+  @include bp(laptop) {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+      > img {
+        width: auto;
+        max-height: 750px;
+      }
+  }
+}
+
+.image-block--half {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: stretch;
+
+
+  @include bp(phablet) {
+    .image-block--half_item {
+      padding: 0 10px;
+      flex-basis: 50%;
+    }
+  }
+}
+
+
+.caption {
+  color: $grey;
+  font-size: 12px;
+  margin: 10px;
+}
+
+
+// Context block // ---------------------------------------
+.context-block {
+  display: flex;
+  flex-flow: column nowrap;
+
+  .context-block_img {
+    img {
+      width: 100%;
+    }
+  }
+
+  .context-block_quote {
+    background: rgba($purple, 0.3);
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    .icon {
+      fill: $purple;
+      height: 20px;
+      margin-bottom: 25px;
+    }
+  }
+
+  @include bp(phablet) {
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    justify-content: center;
+    
+    .context-block_img {
+      max-width: 960px;
+      width: 70%;
+    }
+
+    .context-block_quote {
+      align-self: stretch;
+      max-width: 30%;
+    }
+  }
+} 
+
+// Column block // ---------------------------------------
+.column-block {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: center;
+
+  .col-3 {
+    padding: 15px;
+
+    h3 {
+      margin: 30px auto;
+    }
+
+    li {
+      list-style: none;
+      margin: 20px 0;
+
+      a{
+        @include underline($purple);
+      }
+    }
+  }
+
+  @include bp(phablet){
+    flex-flow: row wrap;
+    align-items: flex-start;
+
+    .col-3 {
+      flex: 1 0 33%;
+    }
+  }
+}
+
+//Centered Block // --------------------------------------
+.centered-block {
+  border: 1px solid $purple;
+  color: $grey;
+  margin: 100px auto;
+  max-width: 80%;
+  padding: 50px 20px;
+  width: 100%;
+
+  .centered-block_title {
+    color: $purple;
+    font-size: 40px;
+    margin-bottom: 45px;
+    text-align: center;
+  }
+
+  .centered-block_item{
+    padding: 10px;
+    margin-bottom: 25px;
+    transition: $transition-fast;
+    
+    a {
+      @include underline ($purple);
+    }
+
+    h2 {
+      margin-bottom: 5px;
+    }
+  }
+}

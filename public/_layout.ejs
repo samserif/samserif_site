@@ -1,0 +1,13 @@
+<html>
+  <head>
+    <title><%= title %></title>
+    <%- partial("/partials/_meta") %>
+  </head>
+  <body>
+    <%- partial("/partials/_header") %>
+    <%- yield %>
+    <%- partial("/partials/_footer") %>
+  </body>
+  <%- partial("/partials/_scripts") %>
+</html>
+

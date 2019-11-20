@@ -1,0 +1,11 @@
+{
+  "index": {
+    "title": "samserif | AWeber Control Panel Refresh",
+    "hero": {
+      "prefix": "cprefresh",
+      "headline": "AWeber Control Panel",
+      "subtext": "Design update for the AWeber control panel"
+    },
+    "projNext": "projects/vendorsenders"
+  }
+}

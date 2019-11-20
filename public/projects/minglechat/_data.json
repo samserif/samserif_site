@@ -1,0 +1,11 @@
+{
+  "index": {
+    "title": "samserif | Ming.le Chat Application",
+    "hero": {
+      "prefix": "minglechat",
+      "headline": "Ming.le Chat Application",
+      "subtext": "Collaboration app for Ming.le Users"
+    },
+    "projNext": "projects/streams"
+  }
+}

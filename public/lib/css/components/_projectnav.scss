@@ -1,0 +1,50 @@
+.projectnav {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+
+  .projectnav_all,
+  .projectnav_next {
+    align-items: center;
+    color: $grey;
+    display: flex;
+    height: 150px;
+    flex-flow: row nowrap;
+    font-size: 18px;
+    justify-content: center;
+    text-decoration: none;
+    width: 50%;
+
+    .icon {
+      margin-right: 20px;
+      max-height: 115px;
+      max-width: 30%;
+      transition: $transition-fast;
+    }
+  
+    &:hover,
+    &:focus {
+      .icon {
+        transform: scale(1.03);
+      }
+    }
+  }
+
+  .projectnav_all {
+    background: rgba($purple, 0.3);
+  }
+
+  .projectnav_next {
+    background: rgba($electricblue, 0.3);
+  }
+
+
+  @include bp(tablet){
+    .projectnav_all,
+    .projectnav_next {
+      font-size: 24px;
+      height: 300px;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+<% var currentCat = current.source;
+
+    //create an array for all matches of category
+    var matches = [];
+
+    for(var key in public.blog.posts._data) {
+        var entry = public.blog.posts._data[key];
+        if(entry.category.includes(currentCat)) {
+            matches.push(entry);
+            matches[matches.length-1].slug = key;
+        }
+    }
+%>
+
+<%  
+function getCatList(data) { 
+    var cats = {};
+    for(var post in data) {
+        var category = data[post].category;
+
+        for(var c of category) {
+            //creates a category array if one doesn't exist
+            if(!(c in cats)) {
+                cats[c] = [];    
+            }
+
+            //pushes blog objects into category array
+            cats[c].push(data[post]);
+
+            //copy the key itself as a slug
+            cats[c][cats[c].length-1]["slug"] = post;
+        }
+    }
+    return cats;
+} 
+%>
+
+<h2 class="text-block_title">Posts in category: "<%- currentCat %>"</h2>
+<ul>
+    <% for(var i=0; i<matches.length; i++) { %>
+        <li class="post_list_item_title"><a href="/blog/posts/<%- matches[i].slug %>.html"><%- matches[i].title %></a></li>
+    <% } %>
+</ul>
+
+

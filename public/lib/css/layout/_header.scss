@@ -1,0 +1,52 @@
+header {
+  align-items: center;
+  background: $white;
+  border-bottom: 1px solid transparent;
+  display: flex;
+  height: 50px;
+  justify-content: space-between;
+  opacity: 0.9;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: fixed;
+  top: 0;
+  transition: 0.5s;
+  width: 100%;
+  z-index: $top;
+
+  .main-nav a {
+    @include underline($purple);
+    color: $grey;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: $transition-fast;
+  }
+
+  &:hover,
+  &:focus {
+    background: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid $ltgrey;
+    opacity: 1;
+  }
+
+  @include bp(phablet){
+    height: 75px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  
+} /* end header */
+
+.js-scrolledDown {
+  header {
+    transform: translateY(-55px);
+    opacity: 0;
+
+
+    &:hover,
+    &:focus {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}

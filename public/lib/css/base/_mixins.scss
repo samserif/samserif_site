@@ -1,0 +1,57 @@
+// Colors
+$ltgrey: #DEDEDE;
+$grey: #5F5F5F;
+$summerrain: #787FA7;
+$electricblue: #43BECA;
+$goldenrod: #DDA731;
+$purple: #BB8AB8;
+$white: #FFFFFF;
+/*rgba($color, alpha) for opacity*/
+
+//Categories
+$front-end: $summerrain;
+$design: $purple;
+$ux: $electricblue;
+$tools: $goldenrod;
+
+// Z-Index
+$top: 100;
+$top-sub:80;
+$middle: 50;
+$bottom: 0;
+
+//Animation
+$transition-fast: 0.2s;
+
+//Responsive
+ @mixin bp($point) {
+    @if $point == desktop {
+      @media (min-width: 1600px) { @content ; }
+  }
+    @else if $point == laptop {
+      @media (min-width: 1250px) { @content ; }
+  }
+    @else if $point == tablet {
+      @media (min-width: 960px) { @content ; }
+  }
+    @else if $point == phablet {
+      @media (min-width: 768px)  { @content ; }
+  }
+    @else if $point == mobile {
+      @media (max-width: 320px)  { @content ; }
+  }
+}
+
+//Fancy Link
+@mixin underline($color) {
+  border-bottom: 2px solid transparent;
+  color: $color;
+  text-decoration: none;
+  transition: $transition-fast;
+
+  &:hover,
+  &:focus {
+    border-bottom: 2px solid $color;
+    color: $grey;
+  }
+}

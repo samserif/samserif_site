@@ -1,0 +1,30 @@
+.icon {
+  margin: 0;
+}
+
+.icon--social {
+  height: 30px;
+  width: 30px;
+  fill: $white;
+  transition: $transition-fast;
+
+  &:hover,
+  &:focus {
+    fill: $ltgrey;
+  }
+}
+
+.icon--logo {
+  fill: $purple;
+  transition: $transition-fast;
+  width: 80px;
+
+  @include bp(phablet) {
+    width: 150px;
+  }
+}
+
+.icon--skills {
+  height: 60px;
+  width: 60px;
+}

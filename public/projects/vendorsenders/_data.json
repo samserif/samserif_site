@@ -1,0 +1,11 @@
+{
+  "index": {
+    "title": "samserif | Vendor Senders",
+    "hero": {
+      "prefix": "vendorsenders",
+      "headline": "Vendor Senders",
+      "subtext": "Scheduling web application"
+    },
+    "projNext": "projects/kegg"
+  }
+}

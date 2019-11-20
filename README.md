@@ -5,7 +5,7 @@ This harp project is a static site generator that you can use to build and updat
 
 ##Getting started
 
-You must have harp.js installed to use this project (`sudo npm install -g harp`).  From the root directory (this one!) you can serve the project using `harp server` and you can compile to static files using `harp compile`.
+You must have harp.js installed to use this project (`sudo npm install -g harp`).  From the root directory (this one!) you can serve the project using `harp server` and you can compile to static files using `harp compile . docs`.
 
 First time: Run `npm install -g bower` then `bower install` before attempting to compile or serve.
 

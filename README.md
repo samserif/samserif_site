@@ -1,36 +1,17 @@
-##Personal Setup Notes
-https://github.com/murtyjones/setup-scripts/blob/master/murtyjones.sh
+#SamSerif Web Generator
 
+##What is this?
+This harp project is a static site generator that you can use to build and update your site.  
 
-### iTerm 2
-- Install [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh).
-- [Agnoster Theme](https://gist.github.com/agnoster/3712874).
-  - Make sure font is set to Inconsolata for Powerline for > to show up
+##Getting started
 
-### Sublime Package Control
-- Color Scheme: Monokai
-- Color Highlighter
-- Emmet
-- Lorem
-- Autoprefixer
-- GitGutter
-- Html5/CSS3
+You must have harp.js installed to use this project (`sudo npm install -g harp`).  From the root directory (this one!) you can serve the project using `harp server` and you can compile to static files using `harp compile`.
 
-###Chrome Extensions
-- Piggy
-- Full Screen Page Capture
-- Invision Live Capture
-- Just not Sorry
-- Muzli 2
-- Boomerang
-- OneTab
-- WhatFont
-- bitly
-- Pinterest
+You should `bower install` before attempting to compile or serve.
 
-###Sketch Plugins
-- Artboards to PDF
-- Notebook
-- Measure
-- Craft 
-- Autolayout
+##Using the project
+You edit files inside the public directory.  When you compile, your static files are located in the www/ directory.  This is what is deployed to the remote servers.
+
+##Deploying
+In command line: ./deploy.sh
+pw: in .local

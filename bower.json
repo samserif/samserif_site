@@ -1,0 +1,24 @@
+{
+  "name": "samserif.com",
+  "version": "0.0.1",
+  "authors": [
+    "Samantha Provenza <sam@samserif.co>"
+  ],
+  "description": "A rebuild of the SamSerif website",
+  "main": "public/index.ejs",
+  "license": "None",
+  "homepage": "samserif.co",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/lib/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "underscore": "~1.8.3"
+  }
+}

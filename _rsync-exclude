@@ -1,0 +1,8 @@
+node_modules
+.tmp
+.sass-cache
+.codekit-cache
+*.lock
+*.DS_Store
+notes.txt
+*npm-debug.log

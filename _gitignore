@@ -1,0 +1,6 @@
+**/*.DS_Store
+**/lib/vendor/**/*
+**/www/**/*
+**/psds/**/*
+node_modules/*
+.local/*

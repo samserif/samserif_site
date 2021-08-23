@@ -1,13 +1,13 @@
 {
-  "name": "samserif.com",
+  "name": "samserif.me",
   "version": "0.0.1",
   "authors": [
-    "Samantha Provenza <sam@samserif.co>"
+    "Samantha Provenza <sam@samserif.me>"
   ],
   "description": "A rebuild of the SamSerif website",
   "main": "public/index.ejs",
   "license": "None",
-  "homepage": "samserif.co",
+  "homepage": "samserif.me",
   "private": true,
   "ignore": [
     "**/.*",

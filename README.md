@@ -1,4 +1,12 @@
-#SamSerif Web Generator
+#SamSerif site instructions 2024
+- update code in branch
+- edit Docs folder, don't touch Public
+
+
+
+
+
+ Web Generator
 
 ##What is this?
 This harp project is a static site generator that you can use to build and update your site.  
